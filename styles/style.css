@@ -15,7 +15,6 @@ main {
 
 /* Navbar */
 .navbar {
-    display: flex;
     padding: 1rem 0rem;
 }
 
@@ -25,24 +24,15 @@ main {
     margin: 0;
     height: 100%;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    /* justify-content: flex-start; */
 }
 
-.nav-item {
-    width: 100%;
-}
 
 .nav-item:last-child {
     margin-left: auto;
-    justify-content: flex-end;
-    padding-left: 250%;
+    padding-right: 3%;
 }
 
 .nav-link {
-    display:flex;
-    justify-content: center;
     height: 2rem;
     color: #b7c4ca;
     text-decoration: none;
