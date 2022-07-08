@@ -54,7 +54,7 @@ body {
     flex: 1;
 }
 
-/* Left Side Nav */
+/* Second Tier Nav Style */
 .content-navbar {
     background-color: #fafafa;
     border-bottom: 1px solid #b7c4ca;
@@ -69,10 +69,8 @@ body {
     font-size: 1rem;
 }
 
-.content-nav-link:visited{
-    background-color: white;
-    border-bottom: 1px solid #fff;
-    /* border- */
+.editor-navbar {
+    justify-content: flex-end;
 }
 
 
