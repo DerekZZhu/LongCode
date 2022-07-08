@@ -1,3 +1,8 @@
+:root {
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+}
+
 * {
     box-sizing: border-box; /* all elements include border and padding in size */
 }
@@ -8,14 +13,10 @@ body {
     padding: 0;
 }
 
-main {
-    margin-top: 5rem;
-    padding: 1rem;
-}
-
 /* Navbar */
 .navbar {
     padding: 1rem 0rem;
+    border: 1px solid #b7c4ca;
 }
 
 .navbar-nav {
@@ -26,7 +27,6 @@ main {
     display: flex;
 }
 
-
 .nav-item:last-child {
     margin-left: auto;
     padding-right: 3%;
@@ -34,13 +34,9 @@ main {
 
 .nav-link {
     height: 2rem;
-    color: #b7c4ca;
+    color: #969ea4;
     text-decoration: none;
-}
-
-.link-text {
     margin-left: 1.5rem;
-    font-family: "Roboto", sans-serif;
     font-size: 1.5rem;
 }
 
@@ -51,5 +47,21 @@ main {
 /* Main */
 .container {
     display: flex;
-    flex-direction: row;
+    align-items: flex-start;
+}
+
+/* Left Side Nav */
+.content-navbar {
+    padding: 1rem 0rem;
+    background-color: #fafafa;
+}
+
+.content-nav-link {
+    color: #969ea4;
+    text-decoration: none;
+    margin: 0rem 1.5rem;
+}
+
+.child {
+    flex: 1;
 }
