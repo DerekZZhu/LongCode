@@ -47,11 +47,11 @@ body {
 /* Main */
 .container {
     display: flex;
-    align-items: flex-start;
 }
 
 .child {
     flex: 1;
+    width: 50%;
 }
 
 /* Second Tier Nav Style */
@@ -69,8 +69,17 @@ body {
     font-size: 1rem;
 }
 
-.editor-navbar {
+.editor-nav {
     justify-content: flex-end;
 }
 
+/* Drag Bar and Panels */
+.dragbar {
+    padding: 6px;
+    cursor: col-resize;
+    background-color: #fafafa;
+    height: 100vh;
+    border-left: 1px solid #b7c4ca;
+    border-right: 1px solid #b7c4ca;
+  }
 
