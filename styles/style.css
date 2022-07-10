@@ -47,10 +47,11 @@ body {
 /* Main */
 .container {
     display: flex;
+    min-height: 100vh;
 }
 
 .child {
-    flex: 1;
+    flex: 1 1 auto;
     width: 50%;
 }
 
@@ -79,7 +80,15 @@ body {
     cursor: col-resize;
     background-color: #fafafa;
     height: 100vh;
-    border-left: 1px solid #b7c4ca;
+}
+
+#content {
     border-right: 1px solid #b7c4ca;
-  }
+    height: 100vh;
+}
+
+#editor {
+    border-left: 1px solid #b7c4ca;
+    height: 100vh;
+}
 
