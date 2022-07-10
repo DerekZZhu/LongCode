@@ -45,7 +45,7 @@ body {
     color: black;
 }
 
-/* Main */
+/* Main Content */
 .container {
     display: flex;
     min-height: 90vh;
@@ -74,6 +74,20 @@ body {
 
 .editor-nav {
     justify-content: flex-end;
+}
+
+.btn-dark {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    height: 2rem;
+    width: 4rem;
+    /* padding: 1rem 0rem; */
+}
+
+.buttons {
+    padding-top: 0.5rem;
+    justify-content: flex-start;
 }
 
 /* Drag Bar and Panels */
