@@ -8,7 +8,7 @@ document.addEventListener('mousedown', function(e) {
   if (e.target === handler) {
     isHandlerDragging = true;
   }
-  $handler.toggleClass('darken');
+  
 });
 
 document.addEventListener('mousemove', function(e) {
@@ -21,12 +21,12 @@ document.addEventListener('mousemove', function(e) {
   var boxAminWidth = 60;
   boxA.style.width = (Math.max(boxAminWidth, pointerRelativeXpos - 8)) + 'px';
   boxA.style.flexGrow = 0;
+  handler.toggleClass('darken');
 });
 
-document.addEventListener('mouseup', function(e) {
+document.addEventListener('mouseup', function() {
   // Turn off dragging flag when user mouse is up
   isHandlerDragging = false;
-  $handler.toggleClass('darken');
 });
 
 
