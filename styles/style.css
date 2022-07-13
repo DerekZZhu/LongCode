@@ -120,6 +120,7 @@ p {
     border-right: 1px solid #b7c4ca;
     height: 90vh;
     padding: 0.5rem 1.5rem;
+    overflow-y: scroll
 }
 
 #editor {
@@ -136,4 +137,26 @@ p {
     left:0;
     right:0;
     height:90vh;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #b7c4ca; 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background: #969ea4; 
 }
