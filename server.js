@@ -33,6 +33,6 @@ document.addEventListener('mouseup', function() {
 CodeMirror(document.querySelector('#codepane'), {
     lineNumbers: true,
     tabSize: 2,
-    value: 'System.out.print("Hello World");\nint fuck = 0;',
+    value: 'class Solution {\n   public static void main(String[] args) {\n\n   }\n}\n',
     mode: 'text/x-java'
 });

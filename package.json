@@ -1,0 +1,26 @@
+{
+  "name": "longcodedemo",
+  "version": "1.0.0",
+  "description": "A code practice environment",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DerekZZhu/LongCodeDEMO.git"
+  },
+  "author": "Derek Zhu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DerekZZhu/LongCodeDEMO/issues"
+  },
+  "homepage": "https://github.com/DerekZZhu/LongCodeDEMO#readme",
+  "dependencies": {
+    "docker": "^1.0.0",
+    "docker-compose": "^0.23.17",
+    "node.js": "^0.0.1-security",
+    "piston-client": "^1.0.2"
+  }
+}
