@@ -73,7 +73,7 @@ p {
     background-color: #fafafa;
     color: #969ea4;
     display: block;
-    padding: 1rem 2rem;
+    padding: 0.8rem 2rem;
     text-decoration: none;
     font-size: 0.9rem;
 }
@@ -124,6 +124,7 @@ p {
 #editor {
     border-left: 1px solid #b7c4ca;
     flex:1 1 auto;
+    height: 85vh;
     position: relative;
 }
 
