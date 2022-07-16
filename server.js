@@ -1,3 +1,6 @@
+import piston from "piston-client";
+
+
 var handler = document.querySelector('.dragbar');
 var wrapper = handler.closest('.container');
 var boxA = wrapper.querySelector('.child');
@@ -38,3 +41,10 @@ var editor = CodeMirror(document.querySelector('#codepane'), {
     //value: 'class Solution {\n   public static void main(String[] args) {\n\n   }\n}\n',
     mode:'text/x-java'
 });
+
+// function run() {
+//   // console.log(editor.getValue());
+//   const client = piston();
+//   const result = client.execute('javascript', editor.getValue(), { language: '3.9.4 '});
+//   console.log(result);
+// }
