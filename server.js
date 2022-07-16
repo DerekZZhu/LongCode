@@ -1,6 +1,4 @@
-import piston from "piston-client";
-
-
+// JS Code to Move bar around
 var handler = document.querySelector('.dragbar');
 var wrapper = handler.closest('.container');
 var boxA = wrapper.querySelector('.child');
@@ -32,19 +30,45 @@ document.addEventListener('mouseup', function() {
   isHandlerDragging = false;
 });
 
-
+// Codemirror code
 var editor = CodeMirror(document.querySelector('#codepane'), {
     lineNumbers: true,
     matchBrackets: true,
-    tabSize: 2,
-    value: '1+1',
-    //value: 'class Solution {\n   public static void main(String[] args) {\n\n   }\n}\n',
+    tabSize: 3,
+    value: 'class Solution {\n   public static void main(String[] args) {\n\n   }\n}\n',
     mode:'text/x-java'
 });
 
-// function run() {
-//   // console.log(editor.getValue());
-//   const client = piston();
-//   const result = client.execute('javascript', editor.getValue(), { language: '3.9.4 '});
-//   console.log(result);
-// }
+function getCode() {
+  return editor.getValue();
+}
+
+function look(data) {
+  console.log(data);
+  console.log(data.run.stdout);
+  console.log(data.run.stderr);
+}
+
+// Code Execution
+function execute() {
+  text = getCode();
+  $.post(
+    url='https://emkc.org/api/v2/piston/execute',
+    data= {
+      language: 'java',
+      version: '15.0.2',
+      files: [
+        {
+          name: 'solution.java',
+          content: text
+        }
+      ],
+      stdin:"",
+      compile_timeout: 10000,
+      run_timeout: 3000,
+      compile_memory_limit: -1,
+      run_memory_limit: -1,
+    },
+    success= data => look(data)
+  )
+}
