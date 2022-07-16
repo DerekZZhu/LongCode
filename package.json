@@ -18,7 +18,6 @@
   },
   "homepage": "https://github.com/DerekZZhu/LongCodeDEMO#readme",
   "dependencies": {
-    "docker-compose": "^0.23.17",
     "node.js": "^0.0.1-security",
     "piston-client": "^1.0.2"
   }

@@ -1,3 +1,6 @@
+import piston from "piston-client";
+
+
 var handler = document.querySelector('.dragbar');
 var wrapper = handler.closest('.container');
 var boxA = wrapper.querySelector('.child');
@@ -21,7 +24,7 @@ document.addEventListener('mousemove', function(e) {
   var boxAminWidth = 60;
   boxA.style.width = (Math.max(boxAminWidth, pointerRelativeXpos - 8)) + 'px';
   boxA.style.flexGrow = 0;
-  handler.toggleClass('darken');
+  handler.toggleAttribute('darken');
 });
 
 document.addEventListener('mouseup', function() {
@@ -30,9 +33,18 @@ document.addEventListener('mouseup', function() {
 });
 
 
-CodeMirror(document.querySelector('#codepane'), {
+var editor = CodeMirror(document.querySelector('#codepane'), {
     lineNumbers: true,
+    matchBrackets: true,
     tabSize: 2,
-    value: 'class Solution {\n   public static void main(String[] args) {\n\n   }\n}\n',
-    mode: 'text/x-java'
+    value: '1+1',
+    //value: 'class Solution {\n   public static void main(String[] args) {\n\n   }\n}\n',
+    mode:'text/x-java'
 });
+
+// function run() {
+//   // console.log(editor.getValue());
+//   const client = piston();
+//   const result = client.execute('javascript', editor.getValue(), { language: '3.9.4 '});
+//   console.log(result);
+// }
