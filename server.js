@@ -1,8 +1,8 @@
 // JS Code to Move bar around
-var handler = document.querySelector('.dragbar');
-var wrapper = handler.closest('.container');
-var boxA = wrapper.querySelector('.child');
-var isHandlerDragging = false;
+const handler = document.querySelector('.dragbar');
+const wrapper = handler.closest('.container');
+const boxA = wrapper.querySelector('.child');
+let isHandlerDragging = false;
 
 $(document).mousedown(function(e) {
   // If mousedown event is fired from .handler, toggle flag to true
