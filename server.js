@@ -4,15 +4,15 @@ var wrapper = handler.closest('.container');
 var boxA = wrapper.querySelector('.child');
 var isHandlerDragging = false;
 
-document.addEventListener('mousedown', function(e) {
+$(document).mousedown(function(e) {
   // If mousedown event is fired from .handler, toggle flag to true
   if (e.target === handler) {
     isHandlerDragging = true;
+    $('.dragbar').toggleClass('darken')
   }
-  
 });
 
-document.addEventListener('mousemove', function(e) {
+$(document).mousemove(function(e) {
   // Don't do anything if dragging flag is false
   if (!isHandlerDragging) {
     return false;
@@ -22,12 +22,12 @@ document.addEventListener('mousemove', function(e) {
   var boxAminWidth = 60;
   boxA.style.width = (Math.max(boxAminWidth, pointerRelativeXpos - 8)) + 'px';
   boxA.style.flexGrow = 0;
-  handler.toggleAttribute('darken');
 });
 
-document.addEventListener('mouseup', function() {
+$(document).mouseup(function() {
   // Turn off dragging flag when user mouse is up
   isHandlerDragging = false;
+  $('.dragbar').toggleClass('darken')
 });
 
 // Codemirror code
@@ -39,10 +39,6 @@ var editor = CodeMirror(document.querySelector('#codepane'), {
     mode:'text/x-java'
 });
 
-function getCode() {
-  return editor.getValue();
-}
-
 function look(data) {
   console.log(data);
   console.log(data.run.stdout);
@@ -51,7 +47,7 @@ function look(data) {
 
 // Code Execution
 function execute() {
-  text = getCode();
+  text = editor.getValue();
   $.post(
     url='https://emkc.org/api/v2/piston/execute',
     data= {
